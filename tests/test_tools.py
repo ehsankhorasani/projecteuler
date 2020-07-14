@@ -20,3 +20,7 @@ class TestTools(TestCase):
     def test_is_factor(self):
         self.assertTrue(is_factor(6, 3))
         self.assertFalse(is_factor(5, 2))
+
+    def test_is_palindrome(self):
+        self.assertTrue(is_palindrome(str(906609)))
+        self.assertFalse(is_palindrome(str(906608)))
