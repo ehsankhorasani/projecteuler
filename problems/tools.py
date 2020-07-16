@@ -16,17 +16,25 @@ def is_prime(number):
         return True
 
 
-def is_factor(a, b):
-    return a % b == 0
+def is_factor(first_number, second_number):
+    return first_number % second_number == 0
 
 
-def is_palindrome(a):
-    try:
-        int(a)
-    except ValueError:
-        return "I just eat numbers"
+def is_palindrome(number: int):
+    text = str(number)
+    for i in range(len(text)):
+        if text[i] != text[(i + 1) * (-1)]:
+            return False
+    return True
 
-    for i in range(len(a)):
-        if a[i] != a[(i + 1) * (-1)]:
+
+def evenly_divisible(divided, divisor: int):
+    """
+    :param divided: مقسوم
+    :param divisor: مقسوم علیه
+    :return:
+    """
+    for n in range(1, divisor):
+        if divided % n != 0:
             return False
     return True

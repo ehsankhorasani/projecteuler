@@ -22,5 +22,9 @@ class TestTools(TestCase):
         self.assertFalse(is_factor(5, 2))
 
     def test_is_palindrome(self):
-        self.assertTrue(is_palindrome(str(906609)))
-        self.assertFalse(is_palindrome(str(906608)))
+        self.assertTrue(is_palindrome(906609))
+        self.assertFalse(is_palindrome(906608))
+
+    def test_evenly_divisible(self):
+        self.assertTrue(evenly_divisible(2520, 10))
+        self.assertFalse(evenly_divisible(2520, 15))
